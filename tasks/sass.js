@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 				if (err) {
 					grunt.log.error(err.formatted + '\n');
 					grunt.warn('');
-                    grunt.event.emit('grunt-sass.error', err.message + '\n  ' + 'Line ' + err.line + '  Column ' + err.column + '  ' + path.relative(process.cwd(), err.file) + '\n');
+					grunt.event.emit('grunt-sass.error', err.formatted + '\n');
 					next(err);
 					return;
 				}
